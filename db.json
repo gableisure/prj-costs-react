@@ -1,0 +1,80 @@
+{
+  "projects": [
+    {
+      "name": "hggh",
+      "budget": "15166",
+      "cost": 0,
+      "services": [],
+      "id": 1
+    },
+    {
+      "name": "hggh",
+      "budget": "15166",
+      "cost": 0,
+      "services": [],
+      "id": 2
+    },
+    {
+      "name": "hggh",
+      "budget": "15166",
+      "cost": 0,
+      "services": [],
+      "category": {
+        "id": "3",
+        "name": "Desing"
+      },
+      "id": 3
+    },
+    {
+      "name": "hggh",
+      "budget": "15166",
+      "cost": 0,
+      "services": [],
+      "category": {
+        "id": "3",
+        "name": "Desing"
+      },
+      "id": 4
+    },
+    {
+      "name": "hggh",
+      "budget": "15166",
+      "cost": 0,
+      "services": [],
+      "category": {
+        "id": "3",
+        "name": "Desing"
+      },
+      "id": 5
+    },
+    {
+      "name": "hggh",
+      "budget": "15166",
+      "cost": 0,
+      "services": [],
+      "category": {
+        "id": "3",
+        "name": "Desing"
+      },
+      "id": 6
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Infra"
+    },
+    {
+      "id": 2,
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": 3,
+      "name": "Desing"
+    },
+    {
+      "id": 4,
+      "name": "Planejamento"
+    }
+  ]
+}
