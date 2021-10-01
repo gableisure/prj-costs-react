@@ -1,6 +1,7 @@
 import Message from '../layouts/Message';
 import LinkButton from '../layouts/LinkButton';
 import Container from '../layouts/Container';
+import Loading from '../layouts/Loading';
 import ProjectCard from '../projects/ProjectCard';
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -8,6 +9,7 @@ import styles from './Projects.module.css';
 
 function Projects() {
     const [projects, setProjects] = useState([])
+    const [removeLoading, setRemoveLoading] = useState(false)
     const URL = 'http://localhost:5000/projects'
     const location = useLocation();
     let message = '';
@@ -18,17 +20,20 @@ function Projects() {
 
     useEffect(() => {
 
-        fetch(URL, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-            .then((resp) => resp.json())
-            .then((data) => {
-                setProjects(data)
+        setTimeout(() => {
+            fetch(URL, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
             })
-            .catch((err) => console.log(err))
+                .then((resp) => resp.json())
+                .then((data) => {
+                    setProjects(data)
+                    setRemoveLoading(true)
+                })
+                .catch((err) => console.log(err))
+        }, 1000)
 
     }, [])
 
@@ -44,6 +49,8 @@ function Projects() {
                 <LinkButton to="/newproject" text="Novo Projeto"/>
             </div>
             
+            
+
             <Container className="start">
                 {projects.length > 0 && (
                         projects.map((project) => (
@@ -56,8 +63,8 @@ function Projects() {
                             />
                         ))
                     )
-
                 }
+                {!removeLoading && <Loading />}
             </Container>
         </div>
     )
