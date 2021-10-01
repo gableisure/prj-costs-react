@@ -1,61 +1,58 @@
 {
   "projects": [
     {
-      "name": "hggh",
-      "budget": "15166",
+      "name": "XPTO/TI",
+      "budget": "100000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
       "cost": 0,
       "services": [],
       "id": 1
     },
     {
-      "name": "hggh",
-      "budget": "15166",
+      "name": "Projeto MoodleBot",
+      "budget": "5000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
       "cost": 0,
       "services": [],
       "id": 2
     },
     {
-      "name": "hggh",
-      "budget": "15166",
-      "cost": 0,
-      "services": [],
+      "name": "Gabriel Ribeiro",
+      "budget": "55555",
       "category": {
         "id": "3",
         "name": "Desing"
       },
-      "id": 3
-    },
-    {
-      "name": "hggh",
-      "budget": "15166",
       "cost": 0,
       "services": [],
-      "category": {
-        "id": "3",
-        "name": "Desing"
-      },
       "id": 4
     },
     {
-      "name": "hggh",
-      "budget": "15166",
+      "name": "Gabriel Ribeiro",
+      "budget": "5000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
       "cost": 0,
       "services": [],
-      "category": {
-        "id": "3",
-        "name": "Desing"
-      },
       "id": 5
     },
     {
-      "name": "hggh",
-      "budget": "15166",
-      "cost": 0,
-      "services": [],
       "category": {
         "id": "3",
         "name": "Desing"
       },
+      "name": "viadagem",
+      "budget": "5200",
+      "cost": 0,
+      "services": [],
       "id": 6
     }
   ],
