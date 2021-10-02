@@ -9,6 +9,7 @@ import styles from './Projects.module.css';
 
 function Projects() {
     const [projects, setProjects] = useState([])
+    const [projectMessage, setProjectMessage] = useState('')
     const [removeLoading, setRemoveLoading] = useState(false)
     const URL = 'http://localhost:5000/projects'
     const location = useLocation();
@@ -33,16 +34,32 @@ function Projects() {
                     setRemoveLoading(true)
                 })
                 .catch((err) => console.log(err))
-        }, 1000)
+        }, 500)
 
     }, [])
 
+    function removeProject(id) {
+        
+        
+        fetch(URL + `/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+            .then((resp) => resp.json())
+            .then((data) => {
+                /* Retorna todos os projetoss que tenham o id diferente do id a ser excluido. E depois atualiza o estado da variavel projects */
+                setProjects(projects.filter((project) => project.id !== id))
+                setProjectMessage('Projeto removido com sucesso!')
+            }).catch((err) => console.log(err))
+
+    }
 
     return (
         <div className={styles.project_container}>
-            {message && (
-                <Message msg={message} type="success"/>
-            )}
+            {message && <Message msg={message} type="success"/>}
+            {projectMessage && <Message msg={projectMessage} type="success"/>}
             
             <div className={styles.title_container}>
                 <h1>Meus projetos</h1>
@@ -60,11 +77,13 @@ function Projects() {
                                 budget={project.budget}
                                 category={project.category}
                                 key={project.id}
+                                handleRemove={removeProject}
                             />
                         ))
                     )
                 }
                 {!removeLoading && <Loading />}
+                
             </Container>
         </div>
     )

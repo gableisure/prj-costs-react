@@ -23,37 +23,15 @@
       "id": 2
     },
     {
-      "name": "Gabriel Ribeiro",
-      "budget": "55555",
+      "name": "Projeto Mais TecInfo",
       "category": {
-        "id": "3",
-        "name": "Desing"
+        "id": "2",
+        "name": "Desenvolvimento"
       },
+      "budget": "45000",
       "cost": 0,
       "services": [],
       "id": 4
-    },
-    {
-      "name": "Gabriel Ribeiro",
-      "budget": "5000",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 5
-    },
-    {
-      "category": {
-        "id": "3",
-        "name": "Desing"
-      },
-      "name": "viadagem",
-      "budget": "5200",
-      "cost": 0,
-      "services": [],
-      "id": 6
     }
   ],
   "categories": [
